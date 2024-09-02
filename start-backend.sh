@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the container names
-DB_CONTAINER_NAME="project-api_db_1"  # Update this if necessary
+DB_CONTAINER_NAME="project-api-db-1"  # Update this if necessary
 APP_CONTAINER_NAME="backend-api_app"
 
 # Definindo a cor verde
