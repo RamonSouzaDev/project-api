@@ -1,4 +1,5 @@
-<h1 align="center">Bem-vindo ao PROJECT API </h1>
+<h1 align="center">Olá 👋, eu sou Ramon Mendes - Desenvolvedor de Software  🌱</h1>
+<h3 align="center">Um desenvolvedor back-end apaixonado por tecnologia</h3>
 
 # Biblioteca API
 
@@ -25,9 +26,6 @@ API RESTful para gerenciamento de uma biblioteca, desenvolvida com Laravel e int
 - MySQL 5.7+ ou PostgreSQL 9.6+
 - Redis
 - Conta AWS (para SQS)
-
-<h1 align="center">Olá 👋, eu sou Ramon Mendes - Desenvolvedor de Software</h1>
-<h3 align="center">Um desenvolvedor back-end apaixonado por tecnologia</h3>
 
 - 🔭 Atualmente estou trabalhando no [desenvolvimento de projetos Back-end](https://github.com/RamonSouzaDev/To-Do-List-)
 
