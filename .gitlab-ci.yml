@@ -1,0 +1,51 @@
+# .gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  MYSQL_DATABASE: banking
+  MYSQL_ROOT_PASSWORD: root
+
+services:
+  - name: mysql:latest
+    alias: db
+
+cache:
+  paths:
+    - vendor/
+
+before_script:
+  - cp .env.example .env
+  - composer install
+  - php artisan key:generate
+  - php artisan migrate --database=sqlite
+
+build:
+  stage: build
+  script:
+    - echo "Build stage: Not much to do since we're using Docker."
+
+test:
+  stage: test
+  script:
+    - vendor/bin/phpunit --coverage-text --coverage-clover=coverage/clover.xml
+  artifacts:
+    paths:
+      - coverage/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/clover.xml
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: http://your-production-url.com
+  script:
+    - echo "Deploy stage: Deploy your application here."
+  only:
+    - main
